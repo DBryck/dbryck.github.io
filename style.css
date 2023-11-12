@@ -6,21 +6,45 @@ body {
     background-color: #f6f4f0;
 }
 
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+        color: #fff;
+    }
+
+    button {
+        background-color: #e0021d;
+        color: #fff;
+    }
+
+    button:hover {
+        background-color: #777;
+    }
+
+    body.dark-mode {
+        background-color: #333;
+        color: #fff;
+    }
+
+    #mode.dark-mode {
+        filter: invert(1);
+    }
+
+    button.dark-mode-button {
+        background-color: #e0021d;
+        color: #fff;
+    }
+
+    button.dark-mode-button:hover {
+        background-color: #777;
+    }
+}
+
 #heuresS1,
 #heuresS2,
 #heuresS3 {
-	display: none;
+    display: none;
     padding-top: 0px;
-}
-
-.container {
-    max-width: 500px;
-    margin: 70px 0 auto;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
 }
 
 label, input, button {
@@ -61,28 +85,4 @@ button:hover {
 
 .gris {
     color: grey;
-}
-
-#mode {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-body.dark-mode {
-    background-color: #333;
-    color: #fff;
-}
-
-#mode.dark-mode {
-    filter: invert(1);
-}
-
-button.dark-mode-button {
-    background-color: #e0021d;
-    color: #fff; /* Changer la couleur du texte en mode sombre */
-}
-
-button.dark-mode-button:hover {
-    background-color: #777; /* Changer la couleur de fond au survol en mode sombre */
 }

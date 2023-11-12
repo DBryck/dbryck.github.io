@@ -286,8 +286,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateModeIcon() {
-        var isDarkMode = body.classList.contains('dark-mode');
-        var modeIconSrc = isDarkMode ? 'https://cdn.discordapp.com/attachments/1030602548966596700/1173317317086691439/icone-de-soleil-rouge.png?ex=656383e7&is=65510ee7&hm=e807ad17c8559e3198fb82bdd90a2d9d31b773887bf2be0f9980105610f222c6&' : 'https://cdn.discordapp.com/attachments/1030602548966596700/1173317316545622076/symbole-de-la-lune-avec-des-etoiles-rouge.png?ex=656383e7&is=65510ee7&hm=7d12ee46018cb43e570a7f5db5223a04f53cedc8a269cda7890dd242d3573094&';
+        var isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var modeIconSrc = isDarkMode ? 'URL_IMAGE_MODE_SOMBRE' : 'URL_IMAGE_MODE_CLAIR';
         modeIcon.src = modeIconSrc;
     }
 
@@ -299,4 +299,16 @@ document.addEventListener('DOMContentLoaded', function() {
     modeIcon.addEventListener('click', function() {
         toggleDarkMode();
     });
+
+    // Détecter le mode sombre/clair lors du chargement de la page
+    updateModeIcon();
+    // Mettre à jour le style du bouton lors du chargement de la page
+    updateButtonStyle();
+
+    // Ajouter un écouteur d'événement pour détecter les changements de préférences de couleur du système
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+        updateModeIcon();
+        updateButtonStyle();
+    });
 });
+
