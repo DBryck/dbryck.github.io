@@ -300,12 +300,9 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleDarkMode();
     });
 
-    // Détecter le mode sombre/clair lors du chargement de la page
     updateModeIcon();
-    // Mettre à jour le style du bouton lors du chargement de la page
     updateButtonStyle();
 
-    // Ajouter un écouteur d'événement pour détecter les changements de préférences de couleur du système
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
         updateModeIcon();
         updateButtonStyle();

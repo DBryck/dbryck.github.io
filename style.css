@@ -86,3 +86,17 @@ button:hover {
 .gris {
     color: grey;
 }
+
+input[type="time"] {
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="time"]:hover,
+input[type="time"]:focus {
+  border-color: #e0021d;
+  box-shadow: 0 0 8px rgba(224, 2, 28, 0.6);
+}
