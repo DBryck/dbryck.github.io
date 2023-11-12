@@ -274,38 +274,86 @@ function calculHeures() {
     alert("Total des heures: " + heuresTotal + "h " + minutesTotal + "min");
 }
 
+  function changerApparenceS1() {
+    var checkbox = document.getElementById("s1");
+    var iconeCheckbox = document.getElementById("iconeCheckboxS1");
+
+    if (checkbox.checked) {
+      iconeCheckbox.classList.remove("fa-square");
+      iconeCheckbox.classList.add("fa-square-check");
+    } else {
+      iconeCheckbox.classList.remove("fa-square-check");
+      iconeCheckbox.classList.add("fa-square");
+    }
+  }
+
+  function changerApparenceS2() {
+    var checkbox = document.getElementById("s2");
+    var iconeCheckbox = document.getElementById("iconeCheckboxS2");
+
+    if (checkbox.checked) {
+      iconeCheckbox.classList.remove("fa-square");
+      iconeCheckbox.classList.add("fa-square-check");
+    } else {
+      iconeCheckbox.classList.remove("fa-square-check");
+      iconeCheckbox.classList.add("fa-square");
+    }
+  }
+
+    function changerApparenceS3() {
+    var checkbox = document.getElementById("s3");
+    var iconeCheckbox = document.getElementById("iconeCheckboxS3");
+
+    if (checkbox.checked) {
+      iconeCheckbox.classList.remove("fa-square");
+      iconeCheckbox.classList.add("fa-square-check");
+    } else {
+      iconeCheckbox.classList.remove("fa-square-check");
+      iconeCheckbox.classList.add("fa-square");
+    }
+  }
+
 document.addEventListener('DOMContentLoaded', function() {
     var body = document.body;
-    var modeIcon = document.getElementById('mode');
     var button = document.getElementById('calculer');
 
     function toggleDarkMode() {
         body.classList.toggle('dark-mode');
-        updateModeIcon();
         updateButtonStyle();
-    }
-
-    function updateModeIcon() {
-        var isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        var modeIconSrc = isDarkMode ? 'URL_IMAGE_MODE_SOMBRE' : 'URL_IMAGE_MODE_CLAIR';
-        modeIcon.src = modeIconSrc;
     }
 
     function updateButtonStyle() {
         var isDarkMode = body.classList.contains('dark-mode');
         button.classList.toggle('dark-mode-button', isDarkMode);
     }
-
-    modeIcon.addEventListener('click', function() {
         toggleDarkMode();
-    });
 
-    updateModeIcon();
     updateButtonStyle();
 
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
-        updateModeIcon();
         updateButtonStyle();
     });
 });
 
+    document.addEventListener('DOMContentLoaded', function() {
+        // Sélectionnez toutes les étiquettes associées aux cases à cocher
+        var checkboxLabels = document.querySelectorAll('label[for^="s"]');
+
+        // Ajoutez un gestionnaire d'événement de clic à chaque étiquette
+        checkboxLabels.forEach(function(label) {
+            label.addEventListener('click', function() {
+                // Trouvez l'icône associée à l'étiquette
+                var icon = label.querySelector('.checkbox-icon');
+
+                // Changez la classe de l'icône
+                icon.classList.toggle('fa-regular fa-square-check fa-lg');
+
+                // Trouvez la case associée en utilisant l'ID de l'étiquette
+                var checkboxId = label.getAttribute('for');
+                var checkbox = document.getElementById(checkboxId);
+
+                // Changez l'état de la case lorsque l'étiquette est cliquée
+                checkbox.checked = !checkbox.checked;
+            });
+        });
+    });

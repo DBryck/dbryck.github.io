@@ -52,7 +52,7 @@ label, input, button {
 }
 
 button {
-    background-color: #424244;
+    background-color: #e0021d;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -61,7 +61,7 @@ button {
 }
 
 button:hover {
-    background-color: #e0021d;
+    background-color: #424244;
 }
 
 .container p {
@@ -100,3 +100,18 @@ input[type="time"]:focus {
   border-color: #e0021d;
   box-shadow: 0 0 8px rgba(224, 2, 28, 0.6);
 }
+
+#s1,
+#s2,
+#s3 {
+    display: none;
+}
+
+.fa-square-check {
+    content: "\f14a"; /* Ceci est l'icône de coche dans FontAwesome, vous pouvez ajuster cela en fonction de votre configuration */
+    color: #e0021d;
+}
+
+    label {
+      cursor: pointer;
+    }
