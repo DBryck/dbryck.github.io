@@ -10,7 +10,7 @@ body {
 #heuresS2,
 #heuresS3 {
 	display: none;
-    padding-top: 15px;
+    padding-top: 0px;
 }
 
 .container {
@@ -23,7 +23,7 @@ body {
     position: relative;
 }
 
-label, select, button {
+label, input, button {
     margin: 10px 0;
 }
 
@@ -48,6 +48,7 @@ button:hover {
     position: absolute;
     top: 10px;
     left: 10px;
+    border-radius: 10px;
 }
 
 #checkS1,
@@ -55,4 +56,33 @@ button:hover {
 #checkS3 {
     display: inline-block;
     margin-right: 20px;
+    padding-top: 2px;
+}
+
+.gris {
+    color: grey;
+}
+
+#mode {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+#mode.dark-mode {
+    filter: invert(1);
+}
+
+button.dark-mode-button {
+    background-color: #e0021d;
+    color: #fff; /* Changer la couleur du texte en mode sombre */
+}
+
+button.dark-mode-button:hover {
+    background-color: #777; /* Changer la couleur de fond au survol en mode sombre */
 }

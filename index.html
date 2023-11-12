@@ -8,33 +8,36 @@
 </head>
 <body>
 	<!-- <div class="container"> -->
-		<img id="picnicLogo" src="https://d2jxuf8ovdiw8x.cloudfront.net/uploads/sites/20/2020/11/logo.png" height="50px">
+		<img id="picnicLogo" src="https://d2jxuf8ovdiw8x.cloudfront.net/uploads/sites/20/2020/11/logo.png" height="50px" onclick="changeTheme()">
+		<img onclick="changeTheme()" id="mode" src="https://cdn.discordapp.com/attachments/363439032379899915/1173291136014614689/symbole-de-la-lune-avec-des-etoiles-rouge.png?ex=65636b85&is=6550f685&hm=2df4aefdf0b8a2d94ca32d3c6ded018c1d50edfb62711506f654df1bf4100bf5&" height="50px">
 		<p>Quel(s) shift(s) as-tu réalisés aujourd'hui?</p>
 		<br>
-		<div id="checkS1">
-		<label for="s1">Shift 1</label>
-		<input type="checkbox" id="s1">
-		</div>
-		<div id="checkS2">
-		<label for="s2">Shift 2</label>
-		<input type="checkbox" id="s2">
-		</div>
-		<div id="checkS3">
-		<label for="s3">Shift 3</label>
-		<input type="checkbox" id="s3">
+		<div id="check">
+			<div id="checkS1">
+			<label for="s1">Shift 1</label>
+			<input type="checkbox" id="s1">
+			</div>
+			<div id="checkS2">
+			<label for="s2">Shift 2</label>
+			<input type="checkbox" id="s2">
+			</div>
+			<div id="checkS3">
+			<label for="s3">Shift 3</label>
+			<input type="checkbox" id="s3">
+			</div>
 		</div>
 		<div id="heuresS1">
-			<p>____________________</p>
+			<p class="gris">____________________</p>
 			<p>À quelle heure as-tu commencé et terminé ton S1?</p>
 			<label for="startS1">Début:</label><input type="time" id="startS1"><label for="endS1">Fin:</label><input type="time" id="endS1">
 		</div>
 		<div id="heuresS2">
-			<p>____________________</p>
+			<p class="gris">____________________</p>
 			<p>À quelle heure as-tu commencé et terminé ton S2?</p>
 			<label for="startS2">Début:</label><input type="time" id="startS2"><label for="endS2">Fin:</label><input type="time" id="endS2">
 		</div>
 		<div id="heuresS3">
-			<p>____________________</p>
+			<p class="gris">____________________</p>
 			<p>À quelle heure as-tu commencé et terminé ton S3?</p>
 			<label for="startS3">Début:</label><input type="time" id="startS3"><label for="endS3">Fin:</label><input type="time" id="endS3">
 		</div>

@@ -278,3 +278,30 @@ function calculHeures() {
 
     alert("Total des heures: " + heuresTotal + "h " + minutesTotal + "min");
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var body = document.body;
+    var modeIcon = document.getElementById('mode');
+    var button = document.getElementById('calculer');
+
+    function toggleDarkMode() {
+        body.classList.toggle('dark-mode');
+        updateModeIcon();
+        updateButtonStyle();
+    }
+
+    function updateModeIcon() {
+        var isDarkMode = body.classList.contains('dark-mode');
+        var modeIconSrc = isDarkMode ? 'https://cdn.discordapp.com/attachments/1030602548966596700/1173317317086691439/icone-de-soleil-rouge.png?ex=656383e7&is=65510ee7&hm=e807ad17c8559e3198fb82bdd90a2d9d31b773887bf2be0f9980105610f222c6&' : 'https://cdn.discordapp.com/attachments/1030602548966596700/1173317316545622076/symbole-de-la-lune-avec-des-etoiles-rouge.png?ex=656383e7&is=65510ee7&hm=7d12ee46018cb43e570a7f5db5223a04f53cedc8a269cda7890dd242d3573094&';
+        modeIcon.src = modeIconSrc;
+    }
+
+    function updateButtonStyle() {
+        var isDarkMode = body.classList.contains('dark-mode');
+        button.classList.toggle('dark-mode-button', isDarkMode);
+    }
+
+    modeIcon.addEventListener('click', function() {
+        toggleDarkMode();
+    });
+});
