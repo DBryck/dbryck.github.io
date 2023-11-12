@@ -57,5 +57,5 @@ button:hover {
 #checkS2,
 #checkS3 {
     display: inline-block;
-    margin-right: 20px; /* Ajustez la marge selon vos préférences pour l'espace entre les divs */
+    margin-right: 20px;
 }
