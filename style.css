@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+    color: #5b544e;
+    background-color: #f6f4f0;
+}
+
+#heuresS1,
+#heuresS2,
+#heuresS3 {
+	display: none;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+label, select, button {
+    margin: 10px 0;
+}
+
+button {
+    background-color: #424244;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e0021d;
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    padding-top: 4px;
+    padding-left: 4px;
+}
+
+.container p {
+    margin-top: 0;
+}
