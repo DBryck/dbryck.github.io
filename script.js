@@ -84,7 +84,6 @@ function dureeS1() {
             minutesDureeS1 += 60;
         }
 
-        alert("Ton S1 a duré " + heuresDureeS1 + "h " + minutesDureeS1 + "min");
         return { heures: heuresDureeS1, minutes: minutesDureeS1 };
 
     } else {
@@ -128,7 +127,6 @@ function dureeS2() {
             minutesDureeS2 += 60;
         }
 
-        alert("Ton S2 a duré " + heuresDureeS2 + "h " + minutesDureeS2 + "min");
         return { heures: heuresDureeS2, minutes: minutesDureeS2 };
 
     } else {
@@ -171,7 +169,6 @@ function dureeS3() {
             minutesDureeS3 += 60;
         }
 
-        alert("Ton S3 a duré " + heuresDureeS3 + "h " + minutesDureeS3 + "min");
         return { heures: heuresDureeS3, minutes: minutesDureeS3 };
 
     } else {
@@ -213,7 +210,6 @@ function pauseS1S2() {
                 }
             }
 
-            alert("Tu as eu " + heuresPauseS1S2 + "h " + minutesPauseS1S2 + "min de pause entre ton S1 et ton S2.");
             return { heures: heuresPauseS1S2, minutes: minutesPauseS1S2 };
 
         } else {
@@ -255,7 +251,6 @@ function pauseS2S3() {
                 }
             }
 
-            alert("Tu as eu " + heuresPauseS2S3 + "h " + minutesPauseS2S3 + "min de pause entre ton S2 et ton S3.");
             return { heures: heuresPauseS2S3, minutes: minutesPauseS2S3 };
 
         } else {
