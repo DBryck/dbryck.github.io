@@ -56,7 +56,7 @@ button {
     padding: 2% 3%;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 100%;
+    font-size: 4vw;
 }
 
 button:hover {
@@ -110,12 +110,12 @@ label {
 
 p,
 label {
-    font-size: 5vw;
+    font-size: 4vw;
 }
 
 #question {
     margin-top: 5%;
-    font-size: 5vw;
+    font-size: 4vw;
     width: 100%;
 }
 
