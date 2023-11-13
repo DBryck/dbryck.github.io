@@ -1,7 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 50px;
     color: #5b544e;
     background-color: #f6f4f0;
 }
@@ -65,15 +63,12 @@ button:hover {
     background-color: #424244;
 }
 
-.container p {
-    margin-top: 0;
-}
-
 #picnicLogo {
-    position: absolute;
+    position: relative;
     top: 10px;
     left: 10px;
     border-radius: 10px;
+    width: 8%;
 }
 
 #checkS1,
@@ -90,7 +85,6 @@ button:hover {
 
 input[type="time"] {
   font-size: 16px;
-  padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -109,15 +103,26 @@ input[type="time"]:focus {
 }
 
 .fa-square-check {
-    content: "\f14a"; /* Ceci est l'icône de coche dans FontAwesome, vous pouvez ajuster cela en fonction de votre configuration */
+    content: "\f14a";
     color: #e0021d;
 }
 
-    label {
-      cursor: pointer;
-    }
+label {
+    cursor: pointer;
+}
 
 p,
 label {
-    font-size: 120%;
+    font-size: 100%;
+}
+
+#question {
+    margin-top: 4%;
+    font-size: 100%;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
 }
