@@ -64,9 +64,6 @@ button:hover {
 }
 
 #picnicLogo {
-    position: relative;
-    top: 10px;
-    left: 10px;
     border-radius: 10px;
     width: 15vw;
 }
