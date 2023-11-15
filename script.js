@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  var checkbox = document.getElementById('s3');
-  var hiddenDiv = document.getElementById('heuresS3');
-  checkbox.addEventListener('change', function() {
+    var checkbox = document.getElementById('s3');
+    var hiddenDiv = document.getElementById('heuresS3')
+    checkbox.addEventListener('change', function() {
     if (checkbox.checked) {
       hiddenDiv.style.display = 'block';
     } else {
