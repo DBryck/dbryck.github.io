@@ -76,7 +76,7 @@ button:hover {
     padding-top: 2%;
 }
 
-.gris {
+.rouge {
     color: #e0021d;
     padding-top: 0%;
     margin-top: 1%;
@@ -128,4 +128,9 @@ label {
 
 #calculer {
     text-align: center;
+}
+
+label,
+input {
+    margin: 0px;
 }
